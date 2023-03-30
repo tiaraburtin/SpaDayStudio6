@@ -13,6 +13,8 @@ namespace SpaDay6.ViewModels
 
         [Required(ErrorMessage = "Please Enter All Fields")]
         [StringLength(20, MinimumLength = 6, ErrorMessage = "Password must be between 6 to 20 characters.")]
+
+        [Compare("VerifyPassword", ErrorMessage = "Passwords must match!")]
         public string? Password { get; set; }
 
         [Required(ErrorMessage = "Please Enter All Fields")]
