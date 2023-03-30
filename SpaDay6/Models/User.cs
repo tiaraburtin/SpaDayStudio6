@@ -1,11 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace SpaDay6.Models
 {
 	public class User
 	{
-        public string Username { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
+        public string? UserName { get; set; }
+        public string? Email { get; set; }
+
+        public string? Password { get; set; }
 
         public User()
         {
@@ -13,7 +16,7 @@ namespace SpaDay6.Models
 
         public User(string u, string e, string p)
         {
-            Username = u;
+            UserName = u;
             Email = e;
             Password = p;
         }
